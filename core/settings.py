@@ -22,10 +22,11 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 if not SECRET_KEY:
     raise ImproperlyConfigured('Set the DJANGO_SECRET_KEY environment variable.')
-ALLOWED_HOSTS = []
 
 
-# Application definition
+ALLOWED_HOSTS = ['USERNAME.pythonanywhere.com', '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://USERNAME.pythonanywhere.com']
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -114,7 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
