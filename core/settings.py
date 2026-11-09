@@ -24,8 +24,8 @@ if not SECRET_KEY:
     raise ImproperlyConfigured('Set the DJANGO_SECRET_KEY environment variable.')
 
 
-ALLOWED_HOSTS = ['USERNAME.pythonanywhere.com', '127.0.0.1', 'localhost']
-CSRF_TRUSTED_ORIGINS = ['https://USERNAME.pythonanywhere.com']
+ALLOWED_HOSTS = ['223040589.pythonanywhere.com', '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://223040589.pythonanywhere.com']
 
 
 INSTALLED_APPS = [
