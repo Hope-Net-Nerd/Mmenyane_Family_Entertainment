@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --black: #0b0b0b;
+  --green: #1a7a3c;
+  --green-bright: #2ecc71;
+  --muted: #555555;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ---------- Header & navigation ---------- */
+.site-header {
+  background: var(--black);
+  border-bottom: 3px solid var(--green);
+}
+
+.site-header__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.site-nav a {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--green-bright);
+  border-bottom-color: var(--green-bright);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--black);
+  border-top: 3px solid var(--green);
+  color: #fff;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.footer-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--green-bright);
+  margin: 0 0 12px;
+}
+
+.footer-meta {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  color: #d8d8d8;
+}
+
+/* ---------- Page layout ---------- */
+.profile {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.masthead {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.masthead img {
+  max-width: 220px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 14px;
+  color: var(--green);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--black);
+  margin: 0;
+}
+
+.trading-as {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.rule {
+  width: 80px;
+  border: 0;
+  border-top: 2px solid var(--green);
+  margin: 28px auto;
+}
+
+.tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--black);
+  margin: 0;
+}
+
+section { margin-bottom: 40px; }
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--black);
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 8px;
+  margin: 0 0 16px;
+}
+
+p, li, address {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+ul { padding-left: 20px; }
+li::marker { color: var(--green); }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact {
+  background: var(--black);
+  color: #fff;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.contact h2 {
+  color: var(--green-bright);
+  border-bottom-color: var(--green-bright);
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* ---------- News ---------- */
+.post-card {
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(26, 122, 60, 0.4);
+}
+
+.post-card img { margin-bottom: 20px; }
+
+.post-card h2 { border-bottom: 0; padding-bottom: 0; }
+
+.post-card h2 a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.meta {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.read-more {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--green);
+}
+
+.post-body { margin-top: 32px; }
+.post-body p { font-size: 20px; }
+
+.back-link {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.gallery-grid figure { margin: 0; }
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-grid figcaption {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  h1 { font-size: 32px; }
+  .two-col { grid-template-columns: 1fr; gap: 0; }
+  .site-header__inner { justify-content: center; text-align: center; }
+  .site-nav { justify-content: center; gap: 18px; }
+}
+
+/* ---------- Social links (About page) ---------- */
+.social { text-align: center; }
+.social h2 { display: inline-block; }
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-links li::marker { content: none; }
+
+.social-links a {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 1px solid var(--green);
+  border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--green);
+  color: #fff;
+}

@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+
+
+# Python cache
+__pycache__/
+*.pyc
+
+
+db.sqlite3
+*.sqlite3
+
+# Uploaded photos (stored on the server, not in Git)
+media/
+
+# Output of collectstatic
+staticfiles/
+
+# Secrets and exported data
+.env
+
+
+# Editor and system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

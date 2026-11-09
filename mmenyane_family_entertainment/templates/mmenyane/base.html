@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MFE Pictures{% endblock title %}</title>
+  <link rel="stylesheet" href="{% static 'mmenyane/style.css' %}">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-title">MFE Pictures</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="{% url 'post_list' %}">News</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'about' %}">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-tagline">We Bring Stories To Life</p>
+    <p class="footer-meta">
+      &copy; {% now "Y" %} Mmenyane Family Entertainment Pictures, trading as MFE Pictures.<br>
+      305 B Sekale, Ga-Masemola, 1060
+    </p>
+  </footer>
+
+</body>
+</html>

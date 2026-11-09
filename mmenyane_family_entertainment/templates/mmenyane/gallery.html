@@ -1,0 +1,23 @@
+{% extends "mmenyane/base.html" %}
+{% block title %}Gallery | MFE Pictures{% endblock title %}
+
+{% block content %}
+<div class="profile">
+  <header class="masthead">
+    <p class="eyebrow">Our Work</p>
+    <h1>Gallery</h1>
+    <hr class="rule">
+  </header>
+
+  <div class="gallery-grid">
+    {% for item in images %}
+      <figure>
+        <img src="{{ item.image.url }}" alt="{% if item.caption %}{{ item.caption }}{% else %}MFE Pictures{% endif %}">
+        {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+      </figure>
+    {% empty %}
+      <p>Photographs will be added soon.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

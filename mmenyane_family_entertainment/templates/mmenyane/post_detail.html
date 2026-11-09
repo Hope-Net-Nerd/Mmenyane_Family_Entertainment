@@ -1,0 +1,20 @@
+{% extends "mmenyane/base.html" %}
+{% block title %}{{ post.title }} | MFE Pictures{% endblock title %}
+
+{% block content %}
+<div class="profile">
+  <header class="masthead">
+    <p class="eyebrow">{{ post.created_at|date:"j F Y" }}</p>
+    <h1>{{ post.title }}</h1>
+    <hr class="rule">
+  </header>
+
+  {% if post.cover_image %}
+    <img src="{{ post.cover_image.url }}" alt="{{ post.title }}">
+  {% endif %}
+
+  <div class="post-body">{{ post.body|linebreaks }}</div>
+
+  <div class="back-link"><a class="read-more" href="{% url 'post_list' %}">Back to News</a></div>
+</div>
+{% endblock content %}
